@@ -1,0 +1,34 @@
+//Name: Matthew Nguyen  
+//FileName: Lab6
+//Description: filling arrays with values
+//For:CSE110 Lab 6
+//Time Spent: 90 Minutes
+
+package cse110;
+import java.util.Scanner;
+public class Lab6 
+{
+	public static void main(String []args)
+	{
+		Scanner input = new Scanner(System.in); //Scanner redefined as input. 
+		int numStudents,num;
+		double grade;
+		System.out.println("How many students do you have?");
+		numStudents = input.nextInt();// taking in a user input and applying it to numStudents, Which is what I use to make the array.
+		int[] studentGroups = new int[numStudents];//Declaring array for groupt of the student
+		double[] studentGrades = new double[numStudents]; //Declaring array for the corresponding grade to each student 
+		for(int i =0;i<numStudents;i++)
+		{
+			System.out.println("Group # and Grade # for Entry #"+i+1);
+			num=input.nextInt();
+			studentGroups[i]=num;
+			grade=input.nextDouble();
+			studentGrades[i]=grade;	
+		}
+		for(int i =0;i<numStudents;i++)
+		{
+			System.out.println("Group "+studentGroups[i] + " - " + studentGrades[i]+" Points.");
+		}
+		input.close();
+	}
+}
