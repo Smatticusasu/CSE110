@@ -4,7 +4,7 @@
 //For:CSE110 Lab 6
 //Time Spent: 90 Minutes
 
-package cse110;
+
 import java.util.Scanner;
 public class Lab6 
 {
@@ -14,10 +14,10 @@ public class Lab6
 		int numStudents,num;
 		double grade;
 		System.out.println("How many students do you have?");
-		numStudents = input.nextInt();// taking in a user input and applying it to numStudents, Which is what I use to make the array.
+		numStudents = input.nextInt();// taking in a user input and applying it to numStudents, Which is what I use to make the arrays.
 		int[] studentGroups = new int[numStudents];//Declaring array for groupt of the student
 		double[] studentGrades = new double[numStudents]; //Declaring array for the corresponding grade to each student 
-		for(int i =0;i<numStudents;i++)
+		for(int i =0;i<numStudents;i++) //prompting user to enter in group and grades so the arrays are filled to the length asked earlier
 		{
 			System.out.println("Group # and Grade # for Entry #"+i+1);
 			num=input.nextInt();
@@ -25,7 +25,7 @@ public class Lab6
 			grade=input.nextDouble();
 			studentGrades[i]=grade;	
 		}
-		for(int i =0;i<numStudents;i++)
+		for(int i =0;i<numStudents;i++) //For printint out the student group and grade
 		{
 			System.out.println("Group "+studentGroups[i] + " - " + studentGrades[i]+" Points.");
 		}
